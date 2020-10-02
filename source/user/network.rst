@@ -18,6 +18,7 @@ The *network* module is used mainly for fetching data from publicly available AP
 
 Example:
 ::
+
    # read the response and return as text
    textResp = response.text() 
    # parse the response as JSON

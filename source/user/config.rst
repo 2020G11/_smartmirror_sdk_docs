@@ -4,6 +4,7 @@ user.config
 ============
 The *config* is a globally available instance which can be used to get/set key-value pairs.
 ::
+
    identity = config.get(Key, Value)
 
 .. py:function:: listConfigs()
