@@ -3,6 +3,7 @@
 user.config
 ============
 The *config* is a globally available instance which can be used to get/set key-value pairs.
+This is a persistent storage.
 ::
 
    identity = config.get(Key, Value)
