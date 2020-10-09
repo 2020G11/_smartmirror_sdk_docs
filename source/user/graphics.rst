@@ -43,11 +43,13 @@ user.graphic
    :return: A sprite component
    :rtype: UIComponent
 
-.. py:function:: render(layout)
+.. py:function:: render(layout, width, height)
 
-   Submit a layout to compositor for rendering.  Calling multiple times will overwrite the previous invocation
+   Submit a layout to compositor for rendering.  Calling multiple times will overwrite the previous invocation.
 
    :param Layout layout: A main layout to be rendered
+   :param int width:
+   :param int height:
 
 .. py:class:: UIComponent
 
