@@ -11,6 +11,7 @@ Welcome to SmartMirror SDK's documentation!
    :caption: Contents:
    :glob:
 
+   widget
    user/*
 
 
