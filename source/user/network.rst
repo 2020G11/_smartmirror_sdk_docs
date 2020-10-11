@@ -7,7 +7,7 @@ The *network* module is used mainly for fetching data from publicly available AP
 .. py:function:: fetch(URL, [options])
 
    A general purpose function for sending network requests. Works just like `fetch API <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API>`_.
-   Without options, that is a simple GET request, downloading the contents of the url.
+   Without options, that is a simple GET request, downloading the contents of the url. This is a blocking function.
 
    :param URL: The URL for the network request.
    :type URL: str
