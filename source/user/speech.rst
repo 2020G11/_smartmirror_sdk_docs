@@ -52,6 +52,30 @@ the system's audio hardware. Attribute *languageCode* will be set to **en-US** b
       Sample Output:
       ::
          {
-            "interim": ["this": 0.956, "api": 0.768, "is": 0.743, "amazing": 0.645, "nope": 0.889, "crocodile": 0.134],
-            "final": ["this api is amazing nope": 0.988, "this eh p I is amazon nope": 0.532]
+            "interim": {
+               "this": 0.956, "api": 0.768, "is": 0.743, "amazing": 0.645, "nope": 0.889, "crocodile": 0.134
+            },
+            "final": {
+               "this api is amazing nope": 0.988, "this eh p I is amazon nope": 0.532
+            }
          }
+
+Sample Code Snippet:
+::
+   import user.speech as speech
+
+   speechClient = speech.AudioClient()
+
+   # changing languageCode from default "en-US" to other languageCode
+   speechClient.languageCode = "en-AU"
+
+   # start receiving audio stream indefinitely
+   speechClient.startClient(0)
+   # after receiving input for some time...
+   speechClient.stopClient()
+
+   # get the key-value pair of the complete sentence with highest confidence value
+   results = speechClient.getNaturalText().get("final")
+   finalSentence = max(results.items(), key=lambda item:item[1])
+
+   # example finalSentence would be: ("this api is amazing nope", 0.988)

@@ -36,3 +36,13 @@ This is a persistent storage.
    :return: *None*
    :rtype: *None*
 
+Sample Code Snippet:
+::
+   import user.config as config
+
+   # setting value with widget name & attribute as key
+   config.set("memo.itemCount", 3)
+
+   # retrieve the value with corresponding key
+   itemCount = config.get("memo.itemCount")
+
