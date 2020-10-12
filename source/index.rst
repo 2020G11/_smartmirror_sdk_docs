@@ -15,7 +15,6 @@ Welcome to SmartMirror SDK's documentation!
    user/*
 
 
-
 Indices and tables
 ==================
 
